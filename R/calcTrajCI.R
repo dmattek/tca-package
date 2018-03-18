@@ -6,7 +6,7 @@
 #' @param in.type Choice of normal approximation or boot-strapping
 #' @param ... Other params passed to smean.cl.normal and smean.cl.boot; these include \code{conf.int} for the confidence level, \code{B} for the number of boot-strapping iterations.
 #'
-#' @return
+#' @return Datatable with columns: Mean, lower and upper CI, and grouping columns if provided.
 #' @export
 #' @import data.table
 #' @import Hmisc

@@ -49,6 +49,9 @@ to plot no extra stats, the mean, the mean with 95% CI calculated from the norma
 
 \item{ylim.arg}{:imit of y-axis}
 }
+\value{
+ggplot2 plot object
+}
 \description{
 Plot individual time series
 }

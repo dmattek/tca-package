@@ -20,7 +20,7 @@
 #' @param xlim.arg Limit of x-axis
 #' @param ylim.arg :imit of y-axis
 #'
-#' @return
+#' @return ggplot2 plot object
 #' @export
 #' @import ggplot2
 #'
@@ -33,6 +33,7 @@
 #'
 #' # plot each group in a separate facet; add population mean
 #' plotTraj(dt.arg = dt, x.arg = 'Metadata_RealTime', y.arg = 'objNuc_Intensity_MeanIntensity_imErkCor', group.arg = 'TrackLabel', facet.arg = 'Metadata_Site', summary.arg = 'mean')
+
 plotTraj = function(dt.arg,
                         x.arg,
                         y.arg,

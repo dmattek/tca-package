@@ -18,6 +18,9 @@ calcTrajCI(in.dt, in.col.meas, in.col.by = NULL, in.type = c("normal",
 
 \item{...}{Other params passed to smean.cl.normal and smean.cl.boot; these include \code{conf.int} for the confidence level, \code{B} for the number of boot-strapping iterations.}
 }
+\value{
+Datatable with columns: Mean, lower and upper CI, and grouping columns if provided.
+}
 \description{
 Calculate the mean and CI around time series
 }

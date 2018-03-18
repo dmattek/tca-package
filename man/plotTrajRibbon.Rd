@@ -33,6 +33,9 @@ plotTrajRibbon(dt.arg, x.arg, y.arg, group.arg = NULL, col.arg = NULL,
 
 \item{plotlab.arg}{String with plot title}
 }
+\value{
+ggplot2 plot object
+}
 \description{
 A ribbon with confidence interval for the mean is plotted around the group mean.
 Optionally an additional curve is plotted, e.g. a stimulation time course.

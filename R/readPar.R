@@ -75,8 +75,7 @@ convertStringList2Types <- function(in.l) {
 #'
 #' @return Named list with parameters and their values.
 #' @export
-#'
-#' @examples
+
 readPar = function(in.fname, in.cols = 1:2, in.sheet.idx = 1) {
 
   if(length(in.cols) != 2)

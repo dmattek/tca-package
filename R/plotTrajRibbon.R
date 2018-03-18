@@ -15,7 +15,7 @@
 #' @param ylab.arg String with y-axis label
 #' @param plotlab.arg String with plot title
 #'
-#' @return
+#' @return ggplot2 plot object
 #' @export
 #' @import ggplot2
 #'
