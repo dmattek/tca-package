@@ -6,7 +6,7 @@
 #' @param group.arg String with column name of the grouping variable for trajectories. This is usually a trackID.
 #' @param facet.arg String with oclumn name of the variable used for plot facets (optional)
 #' @param summary.arg Optional summary stats to plot on top of individual time series. Choose from \code{c('none', 'mean', 'meanCInorm', 'meanCIboot')},
-#' to plot no extra stats, the mean, the mean with 95% CI calculated from the normal distribution approximation, the mean with 95% CI calculated via bootstrapping, respectively.
+#' to plot no extra stats, the mean, the mean with 95\% CI calculated from the normal distribution approximation, the mean with 95\% CI calculated via bootstrapping, respectively.
 #' @param facet.ncol.arg Number of facetting columns
 #' @param line.col.arg String with variable name to use for time series colouring (default NULL)
 #' @param xlab.arg String with x-axis label
@@ -18,7 +18,7 @@
 #' @param maxrt.arg Max value of x-axis label
 #' @param xaxisbreaks.arg Value of x-axis interval
 #' @param xlim.arg Limit of x-axis
-#' @param ylim.arg :imit of y-axis
+#' @param ylim.arg Limit of y-axis
 #'
 #' @return ggplot2 plot object
 #' @export
@@ -69,7 +69,7 @@ plotTraj = function(dt.arg,
 
 
   switch(summary.arg,
-         none = {},
+         none = {p.tmp = p.tmp },
          mean = {
            p.tmp = p.tmp +
              stat_summary(

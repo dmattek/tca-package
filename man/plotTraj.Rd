@@ -23,7 +23,7 @@ plotTraj(dt.arg, x.arg, y.arg, group.arg, facet.arg = NULL,
 \item{facet.arg}{String with oclumn name of the variable used for plot facets (optional)}
 
 \item{summary.arg}{Optional summary stats to plot on top of individual time series. Choose from \code{c('none', 'mean', 'meanCInorm', 'meanCIboot')},
-to plot no extra stats, the mean, the mean with 95% CI calculated from the normal distribution approximation, the mean with 95% CI calculated via bootstrapping, respectively.}
+to plot no extra stats, the mean, the mean with 95\% CI calculated from the normal distribution approximation, the mean with 95\% CI calculated via bootstrapping, respectively.}
 
 \item{facet.ncol.arg}{Number of facetting columns}
 
@@ -47,7 +47,7 @@ to plot no extra stats, the mean, the mean with 95% CI calculated from the norma
 
 \item{xlim.arg}{Limit of x-axis}
 
-\item{ylim.arg}{:imit of y-axis}
+\item{ylim.arg}{Limit of y-axis}
 }
 \value{
 ggplot2 plot object
