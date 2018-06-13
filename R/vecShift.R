@@ -12,6 +12,7 @@
 #' @param in.circle If TRUE, inserted values will be taken from shifted vector
 #'
 #' @return Shifted vector
+#' @export
 #'
 #' @examples
 #' v = 1:10
@@ -46,7 +47,7 @@ vecShift <- function(in.x, in.n, in.invert=FALSE, in.fill=NA, in.circle = F){
   if (in.circle) {
     # Circular fill
     if(loc.forward){
-      loc.fill = loc.x[seq(length(in.x) - in.n + 1, length(in.x))]
+      loc.fill = in.x[seq(length(in.x) - in.n + 1, length(in.x))]
       return(c(loc.fill, in.x[seq_len(length(in.x)-in.n)]))
     } else {
       loc.fill = in.x[seq(1, in.n)]
