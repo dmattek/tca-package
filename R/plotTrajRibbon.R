@@ -32,26 +32,6 @@
 #' # plot each group in a separate facet; add population mean
 #' plotTrajRibbon(dt.arg = dt.aggr, x.arg = 'Metadata_RealTime', y.arg = 'Mean')
 
-myGgplotTheme =
-  theme_bw(base_size = 12, base_family = "Helvetica") +
-  theme(
-    panel.spacing = unit(1, "lines"),
-    panel.grid.minor = element_blank(),
-    panel.grid.major = element_blank(),
-    panel.border = element_blank(),
-    axis.line = element_line(color = "black", size = 0.25),
-    axis.text.x = element_text(size = 12),
-    axis.text.y = element_text(size = 12),
-    axis.title = element_text(size = 14),
-    strip.text = element_text(size = 14, face = "bold"),
-    strip.background = element_blank(),
-    legend.key = element_blank(),
-    legend.text = element_text(size = 12),
-    legend.key.height = unit(1, "lines"),
-    legend.key.width = unit(2, "lines"),
-    legend.position = "right"
-  )
-
 plotTrajRibbon = function(dt.arg,
                           x.arg,
                           y.arg,
@@ -65,8 +45,7 @@ plotTrajRibbon = function(dt.arg,
                           ribbon.alpha.arg = 0.5,
                           xlab.arg = NULL,
                           ylab.arg = NULL,
-                          plotlab.arg = NULL,
-                          legendpos.arg = c('top', 'right', 'bottom')) {
+                          plotlab.arg = NULL) {
 
   legendpos.arg = match.arg(legendpos.arg)
 
@@ -100,9 +79,7 @@ plotTrajRibbon = function(dt.arg,
 
   p.tmp = p.tmp +
     xlab(xlab.arg) +
-    ylab(ylab.arg) +
-    myGgplotTheme +
-    theme(legend.position = legendpos.arg)
+    ylab(ylab.arg)
 
   return(p.tmp)
 }
