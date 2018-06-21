@@ -9,7 +9,7 @@ freadCSV2lineHeader(in.file, in.col.rem = NULL)
 \arguments{
 \item{in.file}{Name of the CSV file.}
 
-\item{in.col.rem}{String vector with column names to remove}
+\item{in.col.rem}{String vector with column names to remove, default NULL.}
 }
 \value{
 Data table with column names set according to 2 first lines of the header, i.e. merged with '_'.

@@ -7,7 +7,7 @@
 #' These two lines are merged in this function.
 #'
 #' @param in.file Name of the CSV file.
-#' @param in.col.rem String vector with column names to remove
+#' @param in.col.rem String vector with column names to remove, default NULL.
 #'
 #' @return Data table with column names set according to 2 first lines of the header, i.e. merged with '_'.
 #' @export

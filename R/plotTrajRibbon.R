@@ -47,8 +47,6 @@ plotTrajRibbon = function(dt.arg,
                           ylab.arg = NULL,
                           plotlab.arg = NULL) {
 
-  legendpos.arg = match.arg(legendpos.arg)
-
   p.tmp = ggplot(dt.arg, aes_string(x = x.arg, group = group.arg)) +
     geom_ribbon(aes_string(ymin = ribbon.lohi.arg[1], ymax = ribbon.lohi.arg[2]),
                 fill = ribbon.fill.arg,
