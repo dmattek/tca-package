@@ -23,7 +23,7 @@ checkDigits <- function(x) {
 #' checkLogical('TRUE')
 #' checkLogical('xxxTxxx')
 checkLogical <- function(x) {
-  grepl('^TRUE$|^FALSE|^T|^F$' , x)
+  grepl('^TRUE$|^FALSE$|^T$|^F$' , x)
 }
 
 
