@@ -5,9 +5,10 @@
 \title{Plot time series with CI ribbon}
 \usage{
 plotTrajRibbon(dt.arg, x.arg, y.arg, group.arg = NULL, col.arg = NULL,
-  dt.stim.arg = NULL, stim.x.arg, stim.y.arg, ribbon.lohi.arg = c("Lower",
-  "Upper"), ribbon.fill.arg = "grey50", ribbon.alpha.arg = 0.5,
-  xlab.arg = NULL, ylab.arg = NULL, plotlab.arg = NULL)
+  dt.stim.arg = NULL, stim.x.arg, stim.y.arg,
+  ribbon.lohi.arg = c("Lower", "Upper"), ribbon.fill.arg = "grey50",
+  ribbon.alpha.arg = 0.5, xlab.arg = NULL, ylab.arg = NULL,
+  plotlab.arg = NULL)
 }
 \arguments{
 \item{dt.arg}{Data table in long format with mean time series and upper and lower bound for the CI}

@@ -7,9 +7,9 @@
 plotTraj(dt.arg, x.arg, y.arg, group.arg, facet.arg = NULL,
   summary.arg = c("none", "mean", "meanCInorm", "meanCIboot"),
   facet.ncol.arg = 2, line.col.arg = NULL, xlab.arg = "Time",
-  ylab.arg = "Fl. int.", plotlab.arg = "", dt.stim.arg = NULL, stim.x.arg,
-  stim.y.arg, maxrt.arg = 60, xaxisbreaks.arg = 10, xlim.arg = NULL,
-  ylim.arg = NULL)
+  ylab.arg = "Fl. int.", plotlab.arg = "", dt.stim.arg = NULL,
+  stim.x.arg, stim.y.arg, maxrt.arg = 60, xaxisbreaks.arg = 10,
+  xlim.arg = NULL, ylim.arg = NULL)
 }
 \arguments{
 \item{dt.arg}{Data table in long format}
