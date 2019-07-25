@@ -19,22 +19,3 @@ library(devtools)
 ```
 install_github("dmattek/tca-package")
 ```
-
-**Note**
-On OSX, if you encounter following error during installation:
-
-```
-Error : .onLoad failed in loadNamespace() for 'rJava', details:
-  call: dyn.load(file, DLLpath = DLLpath, ...)
-  error: unable to load shared object '/Users/username/Library/R/3.5/library/rJava/libs/rJava.so':
-  dlopen(/Users/username/Library/R/3.5/library/rJava/libs/rJava.so, 6): Library not loaded: /Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/server/libjvm.dylib
-  Referenced from: /Users/username/Library/R/3.5/library/rJava/libs/rJava.so
-  Reason: image not found
-  ```
-  
-- Make sure you have Java Development Kit installed from [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- Open Terminal.app and type (using an account with admin privileges):
-  
-  ```
-  sudo R CMD javareconf
-  ```
