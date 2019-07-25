@@ -36,7 +36,6 @@ checkLogical <- function(x) {
 #'
 #' @return Named list with elements converted to appropriate types.
 #' @export
-#' @import xlsx
 #'
 #' @examples
 #'  l.tst = list()
@@ -61,41 +60,38 @@ convertStringList2Types <- function(in.l) {
 }
 
 
-#' Return a list with parameter names and their values read from xlsx file
+#' Return a list with parameter names and their values read from xlsx or csv file
 #'
-#' The Excel xlsx file has to contain at least two columns:
+#' The xlsx or csv file has to contain at least two columns:
 #' 1st column with parameter names
 #' 2nd column with parameter values
 #'
-#' In case of rJava error when loading, run: sudo R CMD javareconf
-#'
 #' @param in.fname Name of the xlsx file.
-#' @param in.cols Vector with column names to read. Has to be of length 2.
 #' @param in.sheet.idx Integer with the sheet number in the xlsx to process.
 #'
 #' @return Named list with parameters and their values.
 #' @export
+#' @import readxl
 
-readPar = function(in.fname, in.cols = 1:2, in.sheet.idx = 1) {
+readPar = function(in.fname, in.sheet.idx = 1) {
 
-  if(length(in.cols) != 2)
-    stop('Parameter in.cols has to be of length 2.')
+  if (length(grep('.xlsx', in.fname)) > 0) {
+    require(readxl)
 
-  df.par = read.xlsx(
-    in.fname,
-    sheetIndex = in.sheet.idx,
-    header = FALSE,
-    as.data.frame = TRUE,
-    colIndex = in.cols,
-    colClasses = rep("character", 2),
-    stringsAsFactors = FALSE
-  )
+    df.par = as.data.frame(readxl::read_xlsx(path = in.fname,
+                                             sheet = in.sheet.idx,
+                                             col_names = F))
+  } else if( length(grep('.csv', in.fname)) > 0 ) {
+    df.par = read.csv(file = in.fname,  header = F, sep = ',', stringsAsFactors = F, strip.white = T)
+  } else
+    stop('LOCreadPar: file with parameters is neither a csv, nor an xlsx', call. = F)
+
 
   # convert data frame with parameters to a list
   l.par = split(df.par[, 2], df.par[, 1])
 
   # convert strings with digits to numeric and strings with TRUE/FALSE to logical
-  l.par = convertStringList2Types(l.par)
+  l.par = LOCconvertStringList2Types(l.par)
 
   return(l.par)
 }
