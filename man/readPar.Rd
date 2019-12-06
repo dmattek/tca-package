@@ -2,14 +2,12 @@
 % Please edit documentation in R/readPar.R
 \name{readPar}
 \alias{readPar}
-\title{Return a list with parameter names and their values read from xlsx file}
+\title{Return a list with parameter names and their values read from xlsx or csv file}
 \usage{
-readPar(in.fname, in.cols = 1:2, in.sheet.idx = 1)
+readPar(in.fname, in.sheet.idx = 1)
 }
 \arguments{
 \item{in.fname}{Name of the xlsx file.}
-
-\item{in.cols}{Vector with column names to read. Has to be of length 2.}
 
 \item{in.sheet.idx}{Integer with the sheet number in the xlsx to process.}
 }
@@ -17,10 +15,7 @@ readPar(in.fname, in.cols = 1:2, in.sheet.idx = 1)
 Named list with parameters and their values.
 }
 \description{
-The Excel xlsx file has to contain at least two columns:
+The xlsx or csv file has to contain at least two columns:
 1st column with parameter names
 2nd column with parameter values
-}
-\details{
-In case of rJava error when loading, run: sudo R CMD javareconf
 }

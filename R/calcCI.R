@@ -1,6 +1,4 @@
-
-
-#' Calculate 95% CI from the mean and SD (normal assumption)
+#' Calculate 95\% CI from the mean and SD (normal assumption)
 #'
 #' From: http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)
 #'
@@ -8,7 +6,7 @@
 #' @param in.col.mn Name of the column containing the mean
 #' @param in.col.sd Name of the column containing SD
 #' @param in.col.n Name of the column containing sample size
-#' @param in.clevel Confidence level, default 95%
+#' @param in.clevel Confidence level, default 95\%
 #'
 #' @return Data table with additional columns with lower and upper CI bounds
 #' @export

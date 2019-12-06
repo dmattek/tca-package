@@ -2,7 +2,7 @@
 % Please edit documentation in R/calcCI.R
 \name{calcCI}
 \alias{calcCI}
-\title{Calculate 95% CI from the mean and SD (normal assumption)}
+\title{Calculate 95\% CI from the mean and SD (normal assumption)}
 \usage{
 calcCI(in.dt, in.col.mn, in.col.sd, in.col.n, in.clevel = 0.95)
 }
@@ -15,7 +15,7 @@ calcCI(in.dt, in.col.mn, in.col.sd, in.col.n, in.clevel = 0.95)
 
 \item{in.col.n}{Name of the column containing sample size}
 
-\item{in.clevel}{Confidence level, default 95%}
+\item{in.clevel}{Confidence level, default 95\%}
 }
 \value{
 Data table with additional columns with lower and upper CI bounds
